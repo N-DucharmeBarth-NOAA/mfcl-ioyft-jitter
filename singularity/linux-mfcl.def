@@ -2,7 +2,7 @@ Bootstrap: docker
 From: ubuntu:20.04
 
 %setup
-mkdir -p /executable/v2330
+mkdir -p ${SINGULARITY_ROOTFS}/executable/v2330
 
 %files
 /executable/v2330/mfclo64
