@@ -1,0 +1,6 @@
+  1 1 1000        # set max. number of function evaluations per phase to 1000
+  1 50 -2         # set convergence criterion to 1E-02
+# Activate estimation of regional recruitment deviates
+ 2 70 1          # activate parameters and turn on
+ 2 71 1          # estimation of temporal changes in recruitment distribution
+ 2 110 1         # penalty (n/10) on regional recruitment deviates

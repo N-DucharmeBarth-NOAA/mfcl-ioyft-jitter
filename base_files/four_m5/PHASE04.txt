@@ -1,0 +1,7 @@
+  1 1 1000        # set max. number of function evaluations per phase to 1000
+  1 50 -2         # set convergence criterion to 1E-02
+# Activate estimation of regional recruitment distribution
+  -100000 1 1
+  -100000 2 1
+  -100000 3 1
+  -100000 4 1

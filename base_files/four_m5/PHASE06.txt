@@ -1,0 +1,21 @@
+  1 1 10000       # set max. number of function evaluations per phase to 8000
+  1 50 -3        # convergence criteria of 10^-3
+  2 145 1         # define penalty weight on fit to SRR
+  2 146 1        # estimate SRR parameters
+  2 182 1        # annualize recruits for SRR definition
+  2 163 0        # use steepness parameterization of B&H SRR
+  2 161 1        # set bias correction of BH SRR
+  1 149 0        # remove penalty on recruitment devs
+  2 147 1        # time period between spawning and recruitment must be set to at least 1 to avoid issue with recruitment in the projection period
+  2 148 20        # no. years from last time period to compute average F
+  2 155 4        # omit the last year from average F calculation
+  2 200 4        # exclude terminal year for estimation of B-H SRR
+  2 199 256       # B-H SRR calculation begins in first model period; 1952
+  -999 55 1      # No-fishing calcs
+ 2 171 1        # Turn-on SRR based depletion calc
+  1 186 1        # Write fishmort and plotq0.rep
+  1 187 1        # Write temporary_tag_report
+  1 188 1        # Write ests.rep
+  1 189 1        # Write .fit files
+  -999 14 30     # Relax F penalty
+  2 116 200        # value for Zmax_fish in the catch equations

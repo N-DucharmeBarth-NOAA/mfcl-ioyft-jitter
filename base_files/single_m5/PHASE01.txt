@@ -1,0 +1,153 @@
+#------------------------------------------------------------------------------
+# Initial phase control option
+
+#
+  1 32 7          # This is a change from 2014 that allows all growth parameters to be fixed during the contol phase
+  1 173 27        # Use deviates from growth curve
+  1 184 0         # Do not estimate them
+  1 387 0
+#
+# Catch conditioned flags
+#  general activation
+  1 373 1         # activated CC with Baranov equation
+# 1 373 0         # activated CC with Baranov equation
+  1 393 0
+  2 92 2          # specifies the catch-conditioned option with Baranov equation
+# - catch equation bounds
+  2 116 80        # value for Zmax_fish in the catch equations
+  2 189 80        # the fraction of Zmax_fish above which the penalty is calculated
+  1 382 100       # weight for Zmax_fish penalty
+# - fishing mortality level : observed effort relationship
+  1 377 0         # activate fm:effort fit
+  1 378 0         # student-t option for the fm:effort fit relationship
+  -999 93 0       # activateestimation of student-t dof for fml_effort_rltnshp
+  -999 73 0       # degrees of polynomial for fm_level:effort fit relationship
+# - survey index fisheries
+# -8 92 500        # penalty weight for fitting CPUE
+ -8 92 120        # penalty weight for fitting CPUE
+ -8 66 0          # for time-dependent CV - not yet working
+# - grouping for survey CPUE
+ -1 99 1
+ -2 99 2
+ -3 99 3
+ -4 99 4
+ -5 99 5
+ -6 99 6
+ -7 99 7
+ -8 99 8
+#------------------------------------------------------------------------------
+# Recruitment and initial population settings
+#
+  1 149 100       # recruitment deviations penalty
+  1 400 4         # Final six recruitment deviates set to 0
+  1 398 1         # Fixed terminal recruitments are the arithmetic mean of the remaining period (not the default geometric mean)
+  2 113 0         # scaling init pop - turned off
+  2 177 1         # use old totpop scaling method
+  2 32 1          # and estimate the totpop parameter
+  2 57 4          # sets no. of recruitments per year to 4
+  2 94 1          # initial pop based on M # there is a bug in old versions of MFCL with this
+# 2 94 2          # Work around initial pop based on Z
+# 2 95 8          # Work around, average Z over first 20 periods 
+  2 128 10        # M scalar for age-flag(94)=1
+# 1 374 3         # spline degree for initial survival relationship
+  1 374 0         # spline degree for initial survival relationship
+# 1 375 1000      # penalty weight on initial survivorship function
+  2 171 0         # de-activate SRR offset for no fishing
+#
+#------------------------------------------------------------------------------
+# Likelihood component settings
+#
+  1 141 11        # sets likelihood function for LF data to DM_noRE
+  1 320 5         # activates tail compression
+  1 342 5000      # assumed max ESS
+  -999 89 1
+  -999 69 1
+# Groupings for DR_noRE parameters
+  -1 68 1
+  -2 68 2
+  -3 68 3
+  -4 68 4
+  -5 68 5
+  -6 68 6
+  -7 68 7
+  -8 68 3
+
+#
+#------------------------------------------------------------------------------
+#
+# Selectivity settings
+#
+#  - grouping
+  -1 24 1
+  -2 24 2
+  -3 24 3
+  -4 24 4
+  -5 24 5
+  -6 24 6
+  -7 24 7
+  -8 24 3          # index fishery selectivity linked to fishery 3
+  -999 3 27        # all selectivities equal for age class 27 and older
+  -999 26 2        # sets length-dependent selectivity option
+  -999 57 3        # uses cubic spline selectivity
+  -3 57 1          # except LL and index fishery which are logistic
+  -8 57 1
+  -999 61 7        # with 7 nodes for cubic spline
+  -3 61 0
+  -8 61 0
+  -1 75 3          # specifies youngest age-class for non-zero selectivity
+  -2 75 3
+  -3 75 3
+  -4 75 1
+  -5 75 1
+  -6 75 1
+  -7 75 3
+  -8 75 3
+#-999 75 0
+
+#------------------------------------------------------------------------------
+# Catchability settings
+#
+#------------------------------------------------------------------------------
+# Effort deviation settings
+#
+#------------------------------------------------------------------------------
+# Tag settings
+    1 111 4    # Negative binomial likelihood
+    1 305 0    # Negative binomial variance estimated with default bounds (-5 to 5)
+    1 360 1    # Use tag shedding rates from ini
+    2 96 20    # Tag pooling after 20 quarters
+    1 33 95    # Global upper bound on reporting rate is 0.95 (not used since reporting rate is fixed)
+    2 198 1    # turn on reporting rates from the ini
+-9999 1 5      # defines the mixing period
+-9999 2 0      # include reporting rate in tag calcs
+ -999 33 0     # do not estimate tag reporting rate
+ -999 35 10000 # penalty weight for tag reporting prior
+ -999 36 90    # reporting rate prior mean
+ -999 37 0     # do not estimate time varying reporting rate
+ -999 43 0     # do not estimate variance parameter for all fisheries
+   -6 43 1     # only estimate for PS
+# Groupings of fisheries for tag return data
+-1 32 1
+-2 32 1
+-3 32 1
+-4 32 1
+-5 32 1
+-6 32 2
+-7 32 1
+-8 32 1
+-1 34 1
+-2 34 1
+-3 34 1
+-4 34 1
+-5 34 1
+-6 34 2
+-7 34 1
+-8 34 1
+-1 44 1
+-2 44 1
+-3 44 1
+-4 44 1
+-5 44 1
+-6 44 2
+-7 44 1
+-8 44 1

@@ -1,0 +1,6 @@
+  1 1 1000        # set max. number of function evaluations per phase to 1000
+  1 50 -2         # set convergence criterion to 1E-02
+  2 113 0         # scaling init pop - turned off
+  1 149 100       # set penalty on recruitment devs
+  1 190 1         # write plot.rep files
+  -999 14 15      # Penalties to stop F blowing out
