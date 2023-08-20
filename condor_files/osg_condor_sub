@@ -1,0 +1,33 @@
+
+universe = vanilla
+
+# Define executable and input
+executable = ./condor_files/wrapper_doitall.sh
+
+# Error logging
+log = job_$(Cluster)_$(Process).log
+error = job_$(Cluster)_$(Process).err
+output = job_$(Cluster)_$(Process).out
+
+# Define singularity
++SingularityImage = "osdf:///ospool/ap21/data/nicholas.ducharmebarth/singularity/linux-mfcl-v1.sif"
+
+# Define resources
+request_cpus = 1
+request_memory = 2400MB
+request_disk = 4500MB
+
+# Define project
++ProjectName = "osg.NOAA_DucharmeBarth"
+
+# Define input files
+should_transfer_files = YES
+transfer_input_files = ../../condor_files/doitall.sh,Start.tar.gz
+
+# Define output files
+when_to_transfer_output = ON_EXIT_OR_EVICT
+transfer_output_files = End.tar.gz
+
+# Define queue
+queue target_dir from condor_files/osg_dir.txt
+
