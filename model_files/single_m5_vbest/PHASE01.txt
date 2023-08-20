@@ -3,7 +3,7 @@
 
 #
   1 32 7          # This is a change from 2014 that allows all growth parameters to be fixed during the contol phase
-  1 173 27        # Use deviates from growth curve
+  1 173 0        # Use deviates from growth curve
   1 184 0         # Do not estimate them
   1 387 0
 #

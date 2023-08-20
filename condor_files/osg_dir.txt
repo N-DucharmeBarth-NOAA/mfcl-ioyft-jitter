@@ -1,5 +1,9 @@
 model_files/single_m5
 model_files/single_m5_vb
 model_files/single_m5_vbest
+model_files/single_m5_vb_lorenzen
+model_files/single_m5_vb_lorenzenest
+model_files/single_m5_vbest_lorenzen
+model_files/single_m5_vbest_lorenzenest
 model_files/four_m5
 

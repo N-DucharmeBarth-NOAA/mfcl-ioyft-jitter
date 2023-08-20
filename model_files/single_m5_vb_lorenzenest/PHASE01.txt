@@ -6,6 +6,8 @@
   1 173 0        # Use deviates from growth curve
   1 184 0         # Do not estimate them
   1 387 0
+  2 109 3        # Specifies Lorenzen
+  1 121 0        # But not estimate the scaling parameter yet
 #
 # Catch conditioned flags
 #  general activation

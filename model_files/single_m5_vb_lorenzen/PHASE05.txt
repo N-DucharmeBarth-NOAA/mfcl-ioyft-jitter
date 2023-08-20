@@ -1,5 +1,5 @@
   1 1 10000       # set max. number of function evaluations per phase to 8000
-  1 50 -5        # convergence criteria of 10^-3
+  1 50 -3        # convergence criteria of 10^-3
   2 145 1         # define penalty weight on fit to SRR
   2 146 1        # estimate SRR parameters
   2 182 1        # annualize recruits for SRR definition

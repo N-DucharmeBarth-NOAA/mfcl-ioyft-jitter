@@ -1,0 +1,2 @@
+  1 1 10000       # set max. number of function evaluations per phase to 10000
+  1 50 -5        # convergence criteria of 10^-5
