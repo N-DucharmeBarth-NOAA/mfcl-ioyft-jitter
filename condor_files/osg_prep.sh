@@ -12,7 +12,7 @@ chmod 777 ${1}/doitall.sh
 # create Start.tar.gz
 orig_wd=$(pwd)
 while read p; do
-  cd $p
+  cd ${orig_wd}/$p
   tar -czf Start.tar.gz mfcl.cfg *.txt yft.*
   cd orig_wd
 done <${1}/osg_dir.txt
