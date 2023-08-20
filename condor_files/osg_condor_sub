@@ -1,6 +1,8 @@
 
 universe = vanilla
 
+# Define initial directory
+initial_dir = $(target_dir)
 # Define executable and input
 executable = ./condor_files/wrapper_doitall.sh
 
