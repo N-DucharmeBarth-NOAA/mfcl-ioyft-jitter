@@ -14,6 +14,6 @@ orig_wd=$(pwd)
 while read p; do
   cd ${orig_wd}/$p
   tar -czf Start.tar.gz mfcl.cfg *.txt yft.*
-  cd orig_wd
+  cd $orig_wd
 done <${1}/osg_dir.txt
 unset orig_wd
